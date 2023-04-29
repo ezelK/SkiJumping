@@ -7,12 +7,16 @@ public class PlayerController : MonoBehaviour
 
     public Transform playerTransform;
     public float speed;
+    public bool inWindArea = false;
+    public GameObject windArea;
+
+    Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 5;
-        
+        rb = GetComponent<Rigidbody>();  
     }
 
     // Used for phyisic updates
@@ -36,6 +40,12 @@ public class PlayerController : MonoBehaviour
             GetComponent<Rigidbody>().velocity = newVelocity;
 
         }
+
+        // If player in Wind Area, add a force to player's rigidbody
+        if(inWindArea)
+        {
+            rb.AddForce(windArea.GetComponent<WindAreaManager>().directon * windArea.GetComponent<WindAreaManager>().strength);
+        }
         
     }
 
@@ -43,5 +53,24 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         UIManager.instance.UpdateScoreText();
+    }
+
+
+    void OnTriggerEnter(Collider coll)
+    {
+        // Check the player in Wind Area
+        if(coll.gameObject.tag == "WindArea")
+        {
+            windArea = coll.gameObject;
+            inWindArea = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider coll)
+    {
+        if (coll.gameObject.tag == "WindArea")
+        {
+            inWindArea = false;
+        }
     }
 }
