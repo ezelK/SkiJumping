@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.jbooth.microsplat.wind": {
+      "version": "file:com.jbooth.microsplat.wind",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.jbooth.microsplat.core": "3.9.0"
+      }
+    },
     "com.unity.collab-proxy": {
       "version": "2.0.1",
       "depth": 0,
