@@ -1135,6 +1135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playBtn: {fileID: 208351530}
+  _exitBtn: {fileID: 1578672392}
 --- !u!1 &1578672390
 GameObject:
   m_ObjectHideFlags: 0

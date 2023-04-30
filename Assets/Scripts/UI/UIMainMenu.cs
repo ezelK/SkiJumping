@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class UIMainMenu : MonoBehaviour
 {
     [SerializeField] Button _playBtn;
+    [SerializeField] Button _exitBtn;
 
     // Start is called before the first frame update
     void Start()
     {
         _playBtn.onClick.AddListener(StartNewGame);
+        _exitBtn.onClick.AddListener(ExitGame);
     }
 
     private void StartNewGame()
@@ -19,4 +21,9 @@ public class UIMainMenu : MonoBehaviour
         ScenesManager.Instance.LoadNewGame();
     }
 
+    private void ExitGame()
+    {
+        // Quit the app
+        Application.Quit();
+    }
 }
