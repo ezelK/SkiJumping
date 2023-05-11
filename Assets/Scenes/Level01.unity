@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -838,6 +838,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 415e9718bcfbbf04b8aebfb5e8673187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &990910889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6247908124569559093, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
+  m_PrefabInstance: {fileID: 1887949236367863727}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1308326076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1336,6 +1341,14 @@ PrefabInstance:
       propertyPath: windArea
       value: 
       objectReference: {fileID: 673365833}
+    - target: {fileID: 5607766986925201991, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
+      propertyPath: m_Constraints
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607766986925201992, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6247908124569559093, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1384,13 +1397,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5607766986925201992, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
 --- !u!4 &1887949236367863728 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6250357173352198031, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
   m_PrefabInstance: {fileID: 1887949236367863727}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1887949236367863733
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990910889}
+  m_Material: {fileID: 13400000, guid: b017f0920b427934795f687e599f818b, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!1001 &2680992712423930294
 PrefabInstance:
   m_ObjectHideFlags: 0

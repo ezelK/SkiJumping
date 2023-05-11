@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class StartCameraManager : MonoBehaviour
+public class CameraManager : MonoBehaviour
 {
     // Camera follows the player with specified offset position
     public Transform target;

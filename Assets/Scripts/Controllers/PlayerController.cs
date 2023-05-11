@@ -53,6 +53,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         UIManager.instance.UpdateScoreText();
+
+        // Rotate user around itself in X axis
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.Rotate(new Vector3(8f, 0, 0));
+        } else if (Input.GetKey(KeyCode.S))
+        {
+            transform.Rotate(new Vector3(-8f, 0, 0));
+        }
+
+        
     }
 
 
