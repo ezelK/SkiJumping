@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
+  
 
     void OnTriggerEnter(Collider coll)
     {
@@ -74,6 +75,12 @@ public class PlayerController : MonoBehaviour
         {
             windArea = coll.gameObject;
             inWindArea = true;
+        }
+
+        // Check players falls or not, if he fell calculate the score
+        if (coll.gameObject.tag == "Mountain")
+        {
+            //set isFell = True
         }
     }
 
