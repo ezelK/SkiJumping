@@ -17,13 +17,15 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Set the score as 0 initial score
+        scoreText.text = ScoreManager.instance.initialScoreString;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void MakeSingleton()
@@ -38,9 +40,11 @@ public class UIManager : MonoBehaviour
     }
 
 
-
+    // Calculate the player's score according to the its flying time WHEN THE PLAYER FALLS
     public void UpdateScoreText()
     {
-        scoreText.text = ScoreManager.instance.score.ToString();
+        // if player fell 
+        //      update the scoreText with calculating its'score
+        //scoreText.text = ScoreManager.instance.score.ToString();
     }
 }

@@ -233,11 +233,11 @@ GameObject:
   - component: {fileID: 6250357173352198031}
   - component: {fileID: 6332515788120651241}
   - component: {fileID: 5607766986925201991}
-  - component: {fileID: 5607766986925201992}
   - component: {fileID: 1287376403}
+  - component: {fileID: 1887949236367863733}
   m_Layer: 0
   m_Name: Character_Skier_01
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,21 +295,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 88
   m_CollisionDetection: 0
---- !u!135 &5607766986925201992
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6247908124569559093}
-  m_Material: {fileID: 13400000, guid: b017f0920b427934795f687e599f818b, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.45, z: 0}
 --- !u!114 &1287376403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,6 +313,20 @@ MonoBehaviour:
   speed: 0
   inWindArea: 0
   windArea: {fileID: 0}
+--- !u!136 &1887949236367863733
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6247908124569559093}
+  m_Material: {fileID: 13400000, guid: b017f0920b427934795f687e599f818b, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!1 &6247919837812033213
 GameObject:
   m_ObjectHideFlags: 0
