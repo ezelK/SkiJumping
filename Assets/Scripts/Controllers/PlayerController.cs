@@ -78,9 +78,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // Check players falls or not, if he fell calculate the score
-        if (coll.gameObject.tag == "Mountain")
+        if (coll.gameObject.tag == "FinishRamp")
         {
             //set isFell = True
+            Debug.Log("Player fell");
         }
     }
 
