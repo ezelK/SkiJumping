@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -41,10 +42,9 @@ public class UIManager : MonoBehaviour
 
 
     // Calculate the player's score according to the its flying time WHEN THE PLAYER FALLS
-    public void UpdateScoreText()
+    public void UpdateScoreText(double score)
     {
-        // if player fell 
-        //      update the scoreText with calculating its'score
-        //scoreText.text = ScoreManager.instance.score.ToString();
+        score = Convert.ToInt32(score);
+        scoreText.text = "Score: "+ score.ToString();
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -37,5 +38,13 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    public double CalculateScore(float lastPos)
+    {
+
+        // Last Z pos - starting Z pos
+        // lastZpos - 139.4
+        return Math.Abs(lastPos - 139.4);
+
+    }
 
 }

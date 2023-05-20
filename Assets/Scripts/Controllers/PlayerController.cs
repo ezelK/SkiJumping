@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour
     public Transform playerTransform;
     public float speed;
     public bool inWindArea = false;
+    public GameObject Player;
     public GameObject windArea;
+    private double score;
 
     Rigidbody rb;
 
@@ -52,8 +54,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UIManager.instance.UpdateScoreText();
-
         // Rotate user around itself in X axis
         if (Input.GetKey(KeyCode.W))
         {
@@ -80,8 +80,11 @@ public class PlayerController : MonoBehaviour
         // Check players falls or not, if he fell calculate the score
         if (coll.gameObject.tag == "FinishRamp")
         {
-            //set isFell = True
-            Debug.Log("Player fell");
+            // Calculate the score 
+            score= ScoreManager.instance.CalculateScore(Player.transform.position.x);
+
+            // Update score text
+            UIManager.instance.UpdateScoreText(score);
         }
     }
 
