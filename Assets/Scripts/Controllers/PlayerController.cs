@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour
     public GameObject windArea;
     private double score;
 
-    public Animator animator;
-
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -56,7 +54,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("IsJumped", true);
 
         // Rotate user around itself in X axis
         if (Input.GetKey(KeyCode.W))
