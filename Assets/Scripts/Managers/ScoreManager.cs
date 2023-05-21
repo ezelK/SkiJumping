@@ -41,9 +41,9 @@ public class ScoreManager : MonoBehaviour
     public double CalculateScore(float lastPos)
     {
 
-        // Last Z pos - starting Z pos
+        // Last x pos - starting x pos
         // lastZpos - 139.4
-        return Math.Abs(lastPos - 139.4);
+        return Math.Abs(lastPos - 875.9);
 
     }
 
