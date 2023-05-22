@@ -16,6 +16,7 @@ public class PlaneManager : MonoBehaviour
        // If MainCamera enters to the plane, switch to Side Camera
        if (coll.gameObject.tag == "Player")
        {
+            Debug.Log("Player collides");
             GeneralCameraManager.instance.ShowSideView();
        } 
     }

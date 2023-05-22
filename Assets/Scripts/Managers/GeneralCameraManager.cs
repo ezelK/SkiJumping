@@ -13,6 +13,14 @@ public class GeneralCameraManager : MonoBehaviour
         MakeSingleton();
     }
 
+    private void Start()
+    {
+        sideCamera.enabled = false;
+        startCamera.enabled = true;
+        Debug.Log("Start Camera started.");
+
+    }
+
     private void MakeSingleton()
     {
         if (instance == null)
@@ -31,6 +39,7 @@ public class GeneralCameraManager : MonoBehaviour
     {
         sideCamera.enabled = false;
         startCamera.enabled = true;
+        Debug.Log("Start Camera started. by ShowStartView()");
     }
 
     // Call this function to enable FPS camera,
@@ -39,5 +48,7 @@ public class GeneralCameraManager : MonoBehaviour
     {
         sideCamera.enabled = true;
         startCamera.enabled = false;
+
+        Debug.Log("Side Camera started. by ShowSideViw()");
     }
 }
