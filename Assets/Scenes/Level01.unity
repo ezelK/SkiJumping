@@ -495,6 +495,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2680992712535659715, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 948517350}
     - target: {fileID: 2680992712535659719, guid: c378704d44b932848bda5a7c7a684504, type: 3}
       propertyPath: m_Name
       value: Side Camera
@@ -1433,6 +1437,18 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 948517350}
+    - target: {fileID: 760974549, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: offset.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 760974549, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: offset.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 760974549, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: offset.z
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2188147069515125420, guid: c378704d44b932848bda5a7c7a684504, type: 3}
       propertyPath: target
       value: 
@@ -1500,6 +1516,22 @@ PrefabInstance:
     - target: {fileID: 2680992712535659714, guid: c378704d44b932848bda5a7c7a684504, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 12.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2680992712535659715, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 948517350}
+    - target: {fileID: 2680992712535659715, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: offset.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2680992712535659715, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: offset.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2680992712535659715, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: offset.z
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2680992712535659719, guid: c378704d44b932848bda5a7c7a684504, type: 3}
       propertyPath: m_Name
