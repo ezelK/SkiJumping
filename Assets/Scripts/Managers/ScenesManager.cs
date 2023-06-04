@@ -18,7 +18,6 @@ public class ScenesManager : MonoBehaviour
     public enum Scene
     {
         MenuScene,
-        Play,
         Level01
     }
 

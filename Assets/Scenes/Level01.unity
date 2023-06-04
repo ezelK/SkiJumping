@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 10792182}
   - component: {fileID: 10792183}
   - component: {fileID: 10792184}
+  - component: {fileID: 10792185}
   m_Layer: 0
   m_Name: MANAGERS
   m_TagString: Untagged
@@ -199,6 +200,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startCamera: {fileID: 2680992712423930301}
   sideCamera: {fileID: 287679013}
+--- !u!114 &10792185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10792180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6d8153e5dfb6c489584d62b555465f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaCenter: {x: 0, y: 0, z: 0}
+  areaSize: {x: 0, y: 0}
+  spawnInterval: 2
+  windAreaPrefab: {fileID: 176963811}
 --- !u!1 &71828128
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +453,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79099439}
   m_CullTransparentMesh: 1
+--- !u!1 &176963811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8946884529612735183, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
+  m_PrefabInstance: {fileID: 8946884528943922566}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &287679010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1386,7 +1408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6250357173352198031, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 876.82
+      value: 877.6
       objectReference: {fileID: 0}
     - target: {fileID: 6250357173352198031, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1394,7 +1416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6250357173352198031, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6250357173352198031, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1614,15 +1636,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946884529612735178, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 775
+      value: 410
       objectReference: {fileID: 0}
     - target: {fileID: 8946884529612735178, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 77.7
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 8946884529612735178, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8946884529612735178, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1652,6 +1674,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
+      propertyPath: areaSize.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
+      propertyPath: areaCenter.x
+      value: 327.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
+      propertyPath: areaCenter.y
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
+      propertyPath: areaCenter.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
+      propertyPath: spawnInterval
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
+      propertyPath: windAreaPrefab
+      value: 
+      objectReference: {fileID: 176963811}
     - target: {fileID: 8946884529612735183, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
       propertyPath: m_Name
       value: WindArea
