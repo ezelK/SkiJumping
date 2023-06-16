@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         // Rotate user around itself in X axis
         if (Input.GetKey(KeyCode.W))
         {
