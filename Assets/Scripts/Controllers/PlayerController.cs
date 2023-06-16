@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         // If player in Wind Area, add a force to player's rigidbody
         if(inWindArea)
         {
-            rb.AddForce(windArea.GetComponent<WindAreaManager>().directon * windArea.GetComponent<WindAreaManager>().strength);
+            rb.AddForce(windArea.GetComponent<WindArea>().directon * windArea.GetComponent<WindArea>().strength);
         }
         
     }

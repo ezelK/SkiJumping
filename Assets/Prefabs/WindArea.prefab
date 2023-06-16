@@ -145,6 +145,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 10
   directon: {x: 10, y: 0, z: 0}
+  speed: 30
+  areaCenter: {x: 327.09, y: 115, z: -1}
+  areaSize: {x: 0, y: 300, z: 0}
+  spawnInterval: 5
+  windAreaPrefab: {fileID: 8946884529612735183}
 --- !u!1 &8946884530081742361
 GameObject:
   m_ObjectHideFlags: 0
