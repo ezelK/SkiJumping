@@ -952,7 +952,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 264328e447261c8498dfb5235170fa9a, type: 2}
+  - {fileID: 2100000, guid: 0b4d14158efca2b4aa691b18b8a58e67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2111,7 +2111,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 264328e447261c8498dfb5235170fa9a, type: 2}
+  - {fileID: 2100000, guid: 0b4d14158efca2b4aa691b18b8a58e67, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2337,6 +2338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Start Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 2680992712535659719, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: m_TagString
+      value: StartCamera
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c378704d44b932848bda5a7c7a684504, type: 3}
 --- !u!20 &2680992712423930301 stripped
@@ -2408,6 +2413,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2447280460620770406, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8946884529612735178, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2480,5 +2489,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindArea
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2447280460620770406, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
