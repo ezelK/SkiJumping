@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
             newVelocity = currentVelocity + Vector3.down * 5f;
 
             // Apply new velocity to player
-            GetComponent<Rigidbody>().velocity = newVelocity;
+            rb.velocity = newVelocity;
 
         }
 
@@ -86,6 +86,21 @@ public class PlayerController : MonoBehaviour
 
             // Update score text
             UIManager.instance.UpdateScoreText(score);
+
+            // Finish game
+            StartCoroutine(UIManager.instance.ShowFinishMenuInTime());
+
+
+
+            // Stop player 
+            if (rb != null)
+            {
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                rb.isKinematic = true;
+                Debug.Log("Rigidbody");
+            }
+
         }
     }
 

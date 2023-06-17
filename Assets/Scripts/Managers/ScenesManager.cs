@@ -18,8 +18,7 @@ public class ScenesManager : MonoBehaviour
     public enum Scene
     {
         MenuScene,
-        Level01,
-        Finish
+        Level01
     }
 
     // Load the passed scene
@@ -34,33 +33,8 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene(Scene.Level01.ToString());
     }
 
-    public void LoadNextScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(Scene.MenuScene.ToString());
-    }
-
-    public void LoadFinish()
-    {
-        SceneManager.LoadScene(Scene.Finish.ToString());
-    }
-
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
