@@ -46,5 +46,7 @@ public class UIManager : MonoBehaviour
     {
         score = Convert.ToInt32(score);
         scoreText.text = "Score: "+ score.ToString();
+
+        // Finish game after calculation
     }
 }
