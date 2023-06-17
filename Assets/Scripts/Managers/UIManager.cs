@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
     public TextMeshProUGUI scoreText;
 
+    public Animator finishMenuAnimator;
+    public TextMeshProUGUI finishMenuScoreText;
+
     private void Awake()
     {
         MakeSingleton();
@@ -46,7 +49,16 @@ public class UIManager : MonoBehaviour
     {
         score = Convert.ToInt32(score);
         scoreText.text = "Score: "+ score.ToString();
+        finishMenuScoreText.text = "Your score: "+ score.ToString();
 
-        // Finish game after calculation
+    }
+
+    public IEnumerator ShowFinishMenuInTime()
+    {
+        // wait 2 sec
+        yield return new WaitForSeconds(2);
+
+        // Enable animator
+        finishMenuAnimator.enabled = true;
     }
 }
