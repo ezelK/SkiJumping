@@ -171,6 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 79099441}
+  finishMenuAnimator: {fileID: 0}
+  finishMenuScoreText: {fileID: 0}
 --- !u!114 &10792183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1391,7 +1393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6250357173352198031, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 874.96
+      value: 877.5
       objectReference: {fileID: 0}
     - target: {fileID: 6250357173352198031, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1494,6 +1496,18 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1153996210}
+    - target: {fileID: 2680992712535659715, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: offset.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2680992712535659715, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: offset.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2680992712535659715, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: offset.z
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2680992712535659719, guid: c378704d44b932848bda5a7c7a684504, type: 3}
       propertyPath: m_Name
       value: Start Camera

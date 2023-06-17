@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private double score;
 
     Rigidbody rb;
+    private Quaternion previousRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,22 @@ public class PlayerController : MonoBehaviour
     // Used for phyisic updates
     private void FixedUpdate()
     {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity))
+        {
+            // Calculate the slope angle
+            float slopeAngle = Vector3.Angle(Vector3.up, hit.normal);
+
+            if (slopeAngle > 10f)
+            {
+                // Apply rotation adjustment
+                Quaternion targetRotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
+                Quaternion smoothRotation = Quaternion.Slerp(previousRotation, targetRotation, 1.2f * Time.deltaTime);
+                rb.MoveRotation(smoothRotation);
+                previousRotation = smoothRotation;
+            }
+            
+        }
         // Handle screen clicks.
         if (Input.GetMouseButtonDown(0))
         {
