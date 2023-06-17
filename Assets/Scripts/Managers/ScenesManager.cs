@@ -18,7 +18,8 @@ public class ScenesManager : MonoBehaviour
     public enum Scene
     {
         MenuScene,
-        Level01
+        Level01,
+        Finish
     }
 
     // Load the passed scene
@@ -41,6 +42,11 @@ public class ScenesManager : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(Scene.MenuScene.ToString());
+    }
+
+    public void LoadFinish()
+    {
+        SceneManager.LoadScene(Scene.Finish.ToString());
     }
 
 
