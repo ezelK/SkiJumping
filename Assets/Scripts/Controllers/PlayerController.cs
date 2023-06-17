@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
                 // Apply rotation adjustment
                 Quaternion targetRotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
                 Quaternion smoothRotation = Quaternion.Slerp(previousRotation, targetRotation, 1.2f * Time.deltaTime);
+                smoothRotation = smoothRotation.normalized;
                 rb.MoveRotation(smoothRotation);
                 previousRotation = smoothRotation;
             }
