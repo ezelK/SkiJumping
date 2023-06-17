@@ -443,6 +443,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 760974549, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1153996210}
     - target: {fileID: 2680992712535659714, guid: c378704d44b932848bda5a7c7a684504, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -487,6 +491,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2680992712535659715, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1153996210}
     - target: {fileID: 2680992712535659719, guid: c378704d44b932848bda5a7c7a684504, type: 3}
       propertyPath: m_Name
       value: Side Camera
@@ -739,6 +747,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 415e9718bcfbbf04b8aebfb5e8673187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1153996210 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6250357173352198031, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
+  m_PrefabInstance: {fileID: 1887949236367863727}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1461960679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,6 +1429,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6332515788120651241, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf4c89dd6b2ad0e4c97ce18826606ea2, type: 3}
 --- !u!1001 &2680992712423930294
@@ -1425,6 +1442,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 760974549, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1153996210}
     - target: {fileID: 2680992712535659714, guid: c378704d44b932848bda5a7c7a684504, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1469,6 +1490,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 12.64
       objectReference: {fileID: 0}
+    - target: {fileID: 2680992712535659715, guid: c378704d44b932848bda5a7c7a684504, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1153996210}
     - target: {fileID: 2680992712535659719, guid: c378704d44b932848bda5a7c7a684504, type: 3}
       propertyPath: m_Name
       value: Start Camera
