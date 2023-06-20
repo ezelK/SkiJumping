@@ -12,14 +12,33 @@ public class PlayerController : MonoBehaviour
     public GameObject windArea;
     private double score;
 
+    public static PlayerController instance;
+
     Rigidbody rb;
     private Quaternion previousRotation;
+
+    private void Awake()
+    {
+        MakeSingleton();
+    }
+
+    private void MakeSingleton()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 5;
-        rb = GetComponent<Rigidbody>();  
+        rb = GetComponent<Rigidbody>();
     }
 
     // Used for phyisic updates
@@ -40,7 +59,7 @@ public class PlayerController : MonoBehaviour
                 rb.MoveRotation(smoothRotation);
                 previousRotation = smoothRotation;
             }
-            
+
         }
         // Handle screen clicks.
         if (Input.GetMouseButtonDown(0))
@@ -62,11 +81,11 @@ public class PlayerController : MonoBehaviour
         }
 
         // If player in Wind Area, add a force to player's rigidbody
-        if(inWindArea)
+        if (inWindArea)
         {
             rb.AddForce(windArea.GetComponent<WindArea>().directon * windArea.GetComponent<WindArea>().strength);
         }
-        
+
     }
 
     // Update is called once per frame
@@ -77,20 +96,21 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             transform.Rotate(new Vector3(8f, 0, 0));
-        } else if (Input.GetKey(KeyCode.S))
+        }
+        else if (Input.GetKey(KeyCode.S))
         {
             transform.Rotate(new Vector3(-8f, 0, 0));
         }
 
-        
+
     }
 
-  
+
 
     void OnTriggerEnter(Collider coll)
     {
         // Check the player in Wind Area
-        if(coll.gameObject.tag == "WindArea")
+        if (coll.gameObject.tag == "WindArea")
         {
             windArea = coll.gameObject;
             inWindArea = true;
@@ -100,7 +120,7 @@ public class PlayerController : MonoBehaviour
         if (coll.gameObject.tag == "FinishRamp")
         {
             // Calculate the score 
-            score= ScoreManager.instance.CalculateScore(Player.transform.position.x);
+            score = ScoreManager.instance.CalculateScore(Player.transform.position.x);
 
             // Update score text
             UIManager.instance.UpdateScoreText(score);
