@@ -217,7 +217,7 @@ MonoBehaviour:
   areaCenter: {x: 0, y: 0, z: 0}
   areaSize: {x: 0, y: 0}
   spawnInterval: 2
-  windAreaPrefab: {fileID: 176963811}
+  windAreaPrefab: {fileID: 8946884529612735183, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
 --- !u!1 &71828128
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,11 +455,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79099439}
   m_CullTransparentMesh: 1
---- !u!1 &176963811 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8946884529612735183, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
-  m_PrefabInstance: {fileID: 8946884528943922566}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &287679010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2413,10 +2408,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2447280460620770406, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8946884529612735178, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2461,34 +2452,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
-      propertyPath: areaSize.y
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
-      propertyPath: areaCenter.x
-      value: 327.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
-      propertyPath: areaCenter.y
-      value: 115
-      objectReference: {fileID: 0}
-    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
-      propertyPath: areaCenter.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
-      propertyPath: spawnInterval
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8946884529612735180, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
-      propertyPath: windAreaPrefab
-      value: 
-      objectReference: {fileID: 176963811}
     - target: {fileID: 8946884529612735183, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
       propertyPath: m_Name
       value: WindArea
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2447280460620770406, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe6bf52f7c419db42a4020a1ef0ec866, type: 3}
