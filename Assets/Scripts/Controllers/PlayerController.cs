@@ -12,14 +12,18 @@ public class PlayerController : MonoBehaviour
     public GameObject windArea;
     private double score;
 
+    private ParticleSystem snowParticle;
     Rigidbody rb;
     private Quaternion previousRotation;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 5;
         rb = GetComponent<Rigidbody>();  
+        animator = GetComponent<Animator>();
+        snowParticle = GetComponent<ParticleSystem>();
     }
 
     // Used for phyisic updates
@@ -31,8 +35,10 @@ public class PlayerController : MonoBehaviour
             // Calculate the slope angle
             float slopeAngle = Vector3.Angle(Vector3.up, hit.normal);
 
-            if (slopeAngle > 10f)
+            if (slopeAngle > 5f)
             {
+                animator.SetBool("isMoving", true);
+
                 // Apply rotation adjustment
                 Quaternion targetRotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
                 Quaternion smoothRotation = Quaternion.Slerp(previousRotation, targetRotation, 1.2f * Time.deltaTime);
@@ -76,12 +82,21 @@ public class PlayerController : MonoBehaviour
         // Rotate user around itself in X axis
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Rotate(new Vector3(8f, 0, 0));
+            transform.Rotate(new Vector3(0.5f, 0, 0));
         } else if (Input.GetKey(KeyCode.S))
         {
-            transform.Rotate(new Vector3(-8f, 0, 0));
+            transform.Rotate(new Vector3(-0.5f, 0, 0));
+        }else if (Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool("isJumped", true);
+            Vector3 currentVelocity = GetComponent<Rigidbody>().velocity;
+            Vector3 newVelocity = currentVelocity + playerTransform.forward* 0.08f; ;
+            currentVelocity = newVelocity;
+            rb.velocity = newVelocity;
+            
         }
-
+       
+   
         
     }
 
@@ -99,8 +114,16 @@ public class PlayerController : MonoBehaviour
         // Check players falls or not, if he fell calculate the score
         if (coll.gameObject.tag == "FinishRamp")
         {
+            
+            animator.SetBool("isFalling", true);
+            animator.SetBool("isJumped", false);
+
+
+
+            snowParticle.Play();
             // Calculate the score 
             score= ScoreManager.instance.CalculateScore(Player.transform.position.x);
+
 
             // Update score text
             UIManager.instance.UpdateScoreText(score);
@@ -116,10 +139,10 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
                 rb.isKinematic = true;
-                Debug.Log("Rigidbody");
             }
 
         }
+
     }
 
     private void OnTriggerExit(Collider coll)
@@ -129,4 +152,5 @@ public class PlayerController : MonoBehaviour
             inWindArea = false;
         }
     }
+
 }

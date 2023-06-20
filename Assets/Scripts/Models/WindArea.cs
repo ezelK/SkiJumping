@@ -11,7 +11,6 @@ public class WindArea : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("update called");
         // Move the WindArea to the left in Z axis
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
