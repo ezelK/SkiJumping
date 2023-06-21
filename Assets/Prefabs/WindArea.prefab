@@ -146,6 +146,7 @@ MonoBehaviour:
   strength: 10
   directon: {x: 10, y: 0, z: 0}
   speed: 30
+  willDestroy: 0
 --- !u!1 &8946884530081742361
 GameObject:
   m_ObjectHideFlags: 0
