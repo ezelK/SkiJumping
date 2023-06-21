@@ -135,6 +135,7 @@ public class PlayerController : MonoBehaviour
         // Check players falls or not, if he fell calculate the score
         if (coll.gameObject.tag == "FinishRamp")
         {
+            GeneralCameraManager.instance.ShowStartView();
             
             animator.SetBool("isFalling", true);
             animator.SetBool("isJumped", false);

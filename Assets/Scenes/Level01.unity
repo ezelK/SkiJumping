@@ -635,7 +635,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Side Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2680992712535659715, guid: c378704d44b932848bda5a7c7a684504, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c378704d44b932848bda5a7c7a684504, type: 3}
 --- !u!20 &287679013 stripped
 Camera:
